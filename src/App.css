@@ -1,42 +1,91 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  --Cor_Azul01: #236AF4;
+  --Cor_Azul02: #5C93FC
+}
+::placeholder {
+  color: rgba(255, 255, 255, 0.8);;
+  opacity: 1; /* Firefox */
+}
+.Container{
+  display: flex;
+  justify-content: center;
+}
+.Box{
+  width: min(1440px,100vw);
+  padding: 20px;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* Banner */
+.Banner{
+  background-color: var(--Cor_Azul01);
+  padding: 10px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
+.Title{
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.Title > h2{
+  font-size: min(18px,10vw);
+}
+.Title > svg{
+  padding-right: 10px;
+  font-size: 1.5em;
+}
+
+/* Input */
+.Input{
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.Input_Main{
+  display: flex;
+  align-items: center;
+  background-color: #5C93FC;
+  border-radius: 50px;
+  padding: 10px;
+}
+.Input_Main > input{
+  width: min(200px,100%);
+  border: none;
+  outline: none;
+  padding: 0;
+  background: none;
+  transition: 0.5s ease;
+  color: rgba(255, 255, 255, 0.8);
+}
+.Btn_icon{
+  width: 20px;
+  height: 20px;
+  padding: 10px;
+  border-radius: 100%;
+  transition: 0.5s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+@media screen and (min-width: 992px) {
+  .Box{
+    padding: 50px;
   }
-  to {
-    transform: rotate(360deg);
+  
+  /* Input */
+  .Input_Main > input{
+    width: 0;
   }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
+  .Input_Main:hover input{
+    width: 200px;
   }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
+  .Input_Main:hover .Btn_icon{
+    background-color: #2e64ca;
+  }
 }
