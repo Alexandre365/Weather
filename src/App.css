@@ -18,11 +18,13 @@
 /* Banner */
 .Banner{
   background-color: var(--Cor_Azul01);
-  padding: 10px;
   border-radius: 25px;
+}
+.Search{
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px;
 }
 
 .Title{
@@ -36,6 +38,9 @@
 .Title > svg{
   padding-right: 10px;
   font-size: 1.5em;
+}
+.Title p {
+  font-size: 0.8em;
 }
 
 /* Input */
@@ -73,11 +78,71 @@
   cursor: pointer;
 }
 
+/* Img and temperature */
+.Img_temperature{
+  position: relative;
+  width: 100%;
+  height: 400px;
+}
+.Img_temperature > img{
+  width: 100.5%;
+  height: 100.2%;
+  border-radius: 25px;
+}
+.Card_temperature{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.Card_temperature > div{
+  position: relative;
+  left: 10px;
+  top: 10px;
+  width: min(300px,60%);
+  background-color: #E7EFFF;
+  border-radius: 100px 0px 25px 0px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.temperature{
+  color: #236AF4;
+  font-size: 16px;
+  flex-direction: column;
+  text-align: justify;
+}
+.temperature > div{
+  position: relative;
+  left: 15px;
+  display: flex;
+}
+.temperature  h3 {
+  position: relative;
+  top: 10px;
+  font-size:  min(6em,15vw);
+}
+.temperature  span {
+  font-weight: 800;
+  font-size:  min(6em,15vw);
+}
+.temperature > p {
+  width: 100%;
+}
+
+
 @media screen and (min-width: 992px) {
   .Box{
     padding: 50px;
   }
-  
+  .Title p {
+    font-size: 1em;
+  }
+
   /* Input */
   .Input_Main > input{
     width: 0;
@@ -87,5 +152,20 @@
   }
   .Input_Main:hover .Btn_icon{
     background-color: #2e64ca;
+  }
+
+  .temperature  h3 {
+    position: relative;
+    top: 40px;
+    font-size:  min(4em,10vw);
+  }
+  .temperature  span {
+    position: relative;
+    left: 10px;
+    font-weight: 800;
+    font-size: min(5em,7vw);
+  }
+  .temperature > p {
+    width: 100%;
   }
 }
