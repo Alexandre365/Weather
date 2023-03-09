@@ -3,15 +3,13 @@ import './App.css';
 import Banner from '../components/Banner';
 
 function App() {
-  const [Name, setName] = useState('');
-  const Test = (e: string): any => {
-    setName(e);
-  };
+  const [Name, setName] = useState('dsdaddsadasd');
+
   return (
     <div className="Container">
       <div className="Box">
         <Banner />
-        {Name}
+        <h1>Today overview</h1>
       </div>
     </div>
   );
